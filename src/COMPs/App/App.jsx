@@ -20,14 +20,14 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      {/* <UserForm /> */}
+      <UserForm />
 
       <div className="container">
         <Sidebar />
         <AppRoutes />
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
