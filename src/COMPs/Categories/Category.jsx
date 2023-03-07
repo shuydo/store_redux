@@ -40,7 +40,7 @@ const Category = () => {
     setItems([]); //clear products when change cat
     setEnd(false); //return button See more when change cat
     setParams({ ...defaultParams, categoryId: id }); //params was change to defPar for return offset
-  }, [id]);
+  }, [id, defaultParams, defaultValues]);
 
   useEffect(() => {
     //to serv pag    // if (isLoading || !data.length) return;
@@ -73,7 +73,8 @@ const Category = () => {
     setParams({ ...defaultParams, ...values }); //reset when change filter
   };
 
-  const handleReset = () => {//UI filters reset
+  const handleReset = () => {
+    //UI filters reset
     setValues(defaultValues);
     setParams(defaultParams);
     setEnd(false);

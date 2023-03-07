@@ -13,14 +13,14 @@ const SingleProduct = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const navigate = useNavigate();
-  const {list, related } = useSelector(({ products }) => products);
+  const { list, related } = useSelector(({ products }) => products);
 
   const { data, isLoading, isFetching, isSuccess } = useGetProductQuery({ id });
 
   // console.log(data, isLoading);
   useEffect(() => {
     if (!isFetching && !isLoading && !isSuccess) navigate(ROUTES.HOME); //redirect if wrong product id
-  }, [isLoading, isFetching, isSuccess]);
+  }, [isLoading, isFetching, isSuccess, navigate]);
 
   useEffect(() => {
     // console.log(data);
