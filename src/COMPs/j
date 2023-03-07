@@ -1,5 +1,0 @@
-const handleSubmit = evt => {
-    evt.preventDefault();
-
-    setParams({ ...params, ...values });
-  };

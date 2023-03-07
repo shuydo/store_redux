@@ -15,7 +15,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { currentUser, cart } = useSelector(({ user }) => user); //currentUser
+  const { currentUser, cart } = useSelector(({ user }) => user); 
 
   const [values, setValues] = useState({ name: "Guest", avatar: AVATAR });
   const [searchValue, setSearchValue] = useState("");
@@ -29,7 +29,6 @@ const Header = () => {
   }, [currentUser]);
 
   const handleClick = () => {
-    // console.log("handleClick in Header, currentUser", currentUser);
     if (!currentUser) dispatch(toggleForm(true));
     else navigate(ROUTES.PROFILE);
   };
